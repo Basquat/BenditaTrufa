@@ -1,0 +1,138 @@
+.contact-content {
+    padding: 60px 0;
+}
+
+.contact-content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info h3, .contact-form-container h3 {
+    color: #EA1D2C;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    margin-right: 15px;
+    color: #EA1D2C;
+    font-size: 1.5rem;
+}
+
+.info-item h4 {
+    margin-bottom: 5px;
+    color: #EA1D2C;
+}
+
+.info-item p {
+    color: #EA1D2C;
+    line-height: 1.5;
+}
+
+.social-contact h4 {
+    margin-bottom: 15px;
+    color: #EA1D2C;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid #EA1D2C;
+    color: #EA1D2C;
+}
+
+.social-icon:hover {
+    background-color: #EA1D2C;
+    color: white;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #EA1D2C;
+}
+
+.form-group .btn {
+    background-color: #EA1D2C;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group .error {
+    border-color: red;
+}
+
+/* Map section styles */
+.map-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-top: 1px solid #EA1D2C;
+}
+
+.map-section h3 {
+    text-align: center;
+    color: #EA1D2C;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.map-container {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #EA1D2C;
+    border: 1px solid #EA1D2C;
+}
+
+@media (max-width: 768px) {
+    .contact-content .container {
+        grid-template-columns: 1fr;
+    }
+}

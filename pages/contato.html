@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Bendita Doçeria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bendita Doçeria</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Cardápio</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Entre em contato conosco</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="info-item">
+                        <i class="icon-location"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua das Delícias, 123 - Centro</p>
+                            <p>São Paulo - SP, 01234-567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="icon-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 5555-1234</p>
+                            <p>Horário: Seg-Sex, 9h às 18h</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="icon-email"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@benditadoceria.com.br</p>
+                            <p>pedidos@benditadoceria.com.br</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="icon-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 10h às 22h</p>
+                            <p>Sábado e Domingo: 12h às 22h</p>
+                            <p>Feriados: 12h às 20h</p>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">Facebook</a>
+                            <a href="#" class="social-icon">Instagram</a>
+                            <a href="#" class="social-icon">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Envie uma Mensagem</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="info">Informações</option>
+                                <option value="order">Pedidos</option>
+                                <option value="events">Eventos e Encomendas</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h3>Nossa Localização</h3>
+                <div class="map-container">
+                    <!-- In a real project, you would embed a Google Maps iframe here -->
+                    <div class="map-placeholder">
+                        <p>Mapa será carregado aqui</p>
+                        <p>Rua das Delícias, 123 - Centro, São Paulo - SP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h3>Bendita Doçeria</h3>
+                <p>Rua das Delícias, 123 - Centro</p>
+                <p>São Paulo - SP</p>
+                <p>(11) 5555-1234</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="../img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
