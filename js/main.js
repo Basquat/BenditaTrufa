@@ -146,15 +146,16 @@ document.addEventListener('DOMContentLoaded', function() {
     enhanceProductCards();
     setupCategoryFilters();
     setupSmoothScrolling();
-
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+    createDarkModeButton();
     const contactForm = document.querySelector('form.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
             let isValid = true;
             const requiredFields = this.querySelectorAll('[required]');
-
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
@@ -163,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     field.classList.remove('error');
                 }
             });
-
             if (isValid) {
                 alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
                 this.reset();
@@ -172,15 +172,43 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
-
     // Exemplo de integração com backend Node.js
     fetch('http://localhost:3000/api/usuarios')
         .then(response => response.json())
         .then(data => {
             console.log('Usuários do banco de dados:', data);
-            // Aqui você pode manipular os dados e exibir no HTML se desejar
         })
         .catch(error => {
             console.error('Erro ao buscar usuários da API:', error);
         });
+});
+
+// Função para alternar modo escuro
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+// Cria botão de modo escuro
+function createDarkModeButton() {
+    const btn = document.createElement('button');
+    btn.className = 'dark-mode-toggle';
+    btn.innerHTML = '<span>🌙</span>';
+    btn.style.position = 'fixed';
+    btn.style.bottom = '24px';
+    btn.style.right = '24px';
+    btn.style.zIndex = '999';
+    btn.style.background = 'var(--primary)';
+    btn.style.color = '#fff';
+    btn.style.border = 'none';
+    btn.style.borderRadius = '50%';
+    btn.style.width = '48px';
+    btn.style.height = '48px';
+    btn.style.fontSize = '1.5rem';
+    btn.style.cursor = 'pointer';
+    btn.style.boxShadow = '0 2px 10px rgba(0,0,0,0.12)';
+    btn.style.transition = 'background 0.3s';
+    btn.title = 'Alternar modo escuro';
+    btn.onclick = toggleDarkMode;
+    document.body.appendChild(btn);
+}
